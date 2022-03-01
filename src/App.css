@@ -1,38 +1,55 @@
-.App {
+.App{
+  font-family: 'Black Ops One', cursive;
+}
+.main{
+display: flex;
+ flex-direction: column;
+ align-items:center;
+ 
+}
+
+.title{
+  font-size: 52px;
+  color: darkgreen
+}
+.shownCard{
+  border: 1px solid black;
+  height: 13em;
+  width: 8em;
+  border-radius: 7px;
+  background-color: red;
+  font-size: 15px;
+  margin-top: 1em;
+  margin: auto;
+}
+
+.shownCard p {
+  padding-left: 12px;
+  font-size: x-large;
+  margin: 0px;
+}
+
+.player-info{
+  font-weight: 900;
+  font-size: 24px;
+  color: darkgreen
+}
+
+.suite{
   text-align: center;
+  position: relative;
+  top: 7px;
+  font-size: 85px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  border-bottom: 1px solid black;
+  font-weight: 900;
+  color: darkgreen
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.player-hand{
+  padding-top: 20px;
 }

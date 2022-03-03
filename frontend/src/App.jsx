@@ -12,7 +12,7 @@ const App = () => {
   const [player1, setPlayer1] = useState(hand1);
   const [player2, setPlayer2] = useState(hand2);
   const [scores, setScores] = useState('');
-  const [deck, setDeck] = useState('');
+  // const [deck, setDeck] = useState('');
   const [switcher, setSwitcher] = useState(true)
 
   let gameOver = false;
@@ -31,7 +31,7 @@ const App = () => {
     axios.get(`/api/game/`)
       .then((res) => {
         let newDeck = res.data
-        setDeck(newDeck)
+        // setDeck(newDeck)
         for(let i = 26; i < newDeck.length; i++) player2_deck.push(newDeck[i])
         for(let i = 0; i < 26; i++) player1_deck.push(newDeck[i]);
         setPlayer1(player1_deck[player1_deck.length - 1]);
@@ -39,10 +39,6 @@ const App = () => {
       })
       .catch(err => console.log('error',err));
 
-    console.log('Player2 deck',player2_deck)
-    console.log('Player 1',player1_deck)
-
-   
     setSwitcher(false);
   }
   
@@ -55,11 +51,9 @@ const App = () => {
     setPlayer1(top1);
     setPlayer2(top2);
     if(top1[0].value > top2[0].value){
-      console.log('player1 wins war')
       player1_deck.unshift(...top1,...top2,hand1,hand2)
     } else if (top2[0].value > top1[0].value){
     player2_deck.unshift(...top2,...top1,hand1,hand2);
-    console.log('player2 wins war')
     } 
     else {
       war(top1,top2)
@@ -79,7 +73,7 @@ const App = () => {
        player2_deck.unshift(hand1);
        player2_deck.unshift(hand2);
     } else (
-        setTimeout(war(hand1,hand2), 2000)
+        war(hand1,hand2)
     )
     if(!player1) gameOver = true;
     if(!player2) gameOver = true;
@@ -89,20 +83,29 @@ const App = () => {
 
   const winner = () => {
     if(!player1 && gameOver){
-      axios.put(`/api/players/${scores[1]?._id}`)
-      .then(scores => {setScores(scores)});
+      axios.put(`/api/players/${scores[1]?._id}`,{body: scores[1].score})
+      .then(scores => {setScores(scores.data)});
       return <h1>Player 2 Wins!</h1>;
     }
     if(!player2 && gameOver){
-      axios.put(`/api/players/${scores[0]?._id}`)
-      .then(scores => {setScores(scores)});
+      axios.put(`/api/players/${scores[0]?._id}`,{body: scores[0].score})
+      .then(scores => {setScores(scores.data)});
       return <h1>Player 1 Wins!</h1>;
     }
   }
+
+  // const testFunc =() =>{
+  //   axios.put(`/api/players/${scores[1]._id}`, {body: scores[1].score})
+  //   .then(scores => {
+  //     let newScore = scores.data
+  //     console.log('response scores',scores.data)
+  //     setScores(newScore)});
+  // }
   
   return (
     <div className="App">
-      {console.log('Scores',scores[0]?._id)}
+      {/* <button onClick={() => testFunc()}>test function</button> */}
+      {console.log('Scores',scores)}
       <header className="header">
         <div className="player-score">Player 1: {scores[0]?.score }</div>
         <h1 className="title">War</h1>
@@ -137,9 +140,21 @@ const App = () => {
           </div>
         </div>
       </div>
+
       <footer>
-        <p>Gabriel Reiter</p>
-        <p>Git: </p>
+        <div className="footer">
+        <p>By <a href="https://gabrielhreiter.com" target="_blank" rel="noreferrer">Gabriel Reiter</a></p>
+        <a href="https://github.com/greiter18/War" target="_blank" rel="noreferrer">GitHub</a> 
+        <div>
+          <ul>
+            Technologies
+            <li>React</li>
+            <li>Express</li>
+            <li>MongoDB</li>
+            <li>HTML/CSS</li>
+          </ul>
+        </div>
+        </div>
       </footer>
     </div>
   );

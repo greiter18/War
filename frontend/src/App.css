@@ -3,9 +3,9 @@
 }
 
 .main{
-display: flex;
- flex-direction: column;
- align-items:center;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
  
 }
 
@@ -102,9 +102,21 @@ display: flex;
 
 .button:disabled{
   background-color:darkgreen;
-  color: gray;
+  color: white;
 }
 
 .button:disabled:hover{
   cursor:not-allowed;
+}
+
+.footer{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2em;
+  font-size: 12px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
 }

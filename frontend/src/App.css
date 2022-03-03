@@ -1,0 +1,110 @@
+.App{
+  font-family: 'Black Ops One', cursive;
+}
+
+.main{
+display: flex;
+ flex-direction: column;
+ align-items:center;
+ 
+}
+
+.title{
+  font-size: 52px;
+  color: darkgreen;
+  margin: 0;
+}
+
+.shownCard{
+  border: 1px solid black;
+  height: 13em;
+  width: 8em;
+  border-radius: 7px;
+  font-size: 15px;
+  margin-top: 1em;
+  margin: auto;
+  box-shadow: 3px 1px black;
+}
+
+.vs{
+  padding-top: 3em;
+}
+
+.shownCard p {
+  padding-left: 12px;
+  font-size: x-large;
+  margin: 0px;
+}
+
+.player-info{
+  font-weight: 900;
+  font-size: 24px;
+  color: darkgreen;
+
+}
+
+.suite{
+  text-align: center;
+  position: relative;
+  top: 7px;
+  font-size: 85px;
+}
+
+.header{
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid black;
+  font-weight: 900;
+  color: darkgreen;
+  font-size: 29px;
+  margin-bottom: 25px;
+}
+
+.player-score{
+  margin-top: 20px;
+}
+
+.player-hand{
+  padding-top: 20px;
+}
+
+.facedown-cards{
+  border: 1px solid black;
+  height: 13em;
+  width: 8em;
+  border-radius: 7px;
+  font-size: 15px;
+  margin-top: 1em;
+  margin: auto;
+  background-color: red;
+  box-shadow: 3px 1px black;
+}
+
+.both-cards{
+display: flex;
+}
+
+.button{
+  padding: 3px 17px;
+  color: darkgreen;
+  border: 1px black solid;
+  border-radius: 3px; 
+  font-family: 'Black Ops One', cursive;
+}
+
+.button:hover{
+  cursor: pointer;
+}
+
+.button:first-child{
+      margin-right: 90px;
+}
+
+.button:disabled{
+  background-color:darkgreen;
+  color: gray;
+}
+
+.button:disabled:hover{
+  cursor:not-allowed;
+}

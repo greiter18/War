@@ -1,19 +1,30 @@
 const express = require("express");
 const app = express();
 const mongoose = require('mongoose');
-const db = require('./config/keys').mongoURI; // connects to our database
-const bodyParser = require('body-parser'); // used for postman
-const passport = require("passport");
-const Schema = mongoose.Schema;
+const db = require('./config/keys').mongoURI; 
+const bodyParser = require('body-parser');
 
-const PlayerSchema = new Schema({
-  player: {
-    type: String,
-  },
-  score: {
-    type: Number
-  }
+const players = require("./routes/players")
+const game = require("./routes/game")
+
+
+mongoose
+.connect(db, {useNewUrlParser: true, useUnifiedTopology: true})
+.then(() => console.log('Connected to MongoDB'))
+.catch(err => console.log(err))
+
+app.use(bodyParser.urlencoded({ extended: false })); 
+app.use(bodyParser.json());
+
+app.get("/", (req, res) => {
+  console.log(res);
+  res.send('Hello World')
 })
 
-const Player = mongoose.model('player', PlayerSchema);
-module.exports = Player;
+app.use("/api/players", players);
+app.use("/api/game", game);
+
+const port = process.env.Port || 5000;
+
+app.listen(port, () => { console.log(`Listening to ${port}`);})
+ 

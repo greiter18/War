@@ -1,6 +1,8 @@
 # War
 Revist your favorite classic card game and see who will dominate conquer the playing field
 
+![Screen Shot 2022-03-04 at 11 57 17 AM](https://user-images.githubusercontent.com/66323451/156806377-9cd09fe5-87aa-4ed6-ab73-5c9c5d6f72b3.png)
+
 ## Overview
 
 War is the class card game where 2 players square off with each others top card. Who ever has the higher of the cards collect their opponents card and then both cards go to the bottom of the winners deck. First player to lose all of their cards loses the match and the other player is granted title of winner.

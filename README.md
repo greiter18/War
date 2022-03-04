@@ -4,7 +4,7 @@ Revist your favorite classic card game and see who will dominate conquer the pla
 ![Screen Shot 2022-03-04 at 11 58 53 AM](https://user-images.githubusercontent.com/66323451/156806632-0205c60a-0019-4ed8-a809-fd52598c8c41.png)
 
 ## How to Player
-Visit the live site hosted on heroku here - [ War](https://war-cardsgame.herokuapp.com/) 
+Visit the live site hosted on heroku here - [ War](https://war-cardsgame.herokuapp.com/){:target="_blank"}
 
 When the game is first loaded, the user will need to click on the 'New Game' button to initiate the game. From there let the battling begin. Click on '1..2..3..War' button to see how each player face off in each round. Keep the battle going until a winner is declared. The winner will be congratualted with a message and their career record will increase.
 

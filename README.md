@@ -6,7 +6,7 @@ Revist your favorite classic card game and see who will dominate conquer the pla
 ## How to Play
 Visit the live site hosted on heroku here - <a href="https://war-cardsgame.herokuapp.com/" target="blank">War</a>
 
-When the game is first loaded, the user will need to click on the 'New Game' button to initiate the game. From there let the battling begin. Click on '1..2..3..War' button to see how each player face off in each round. Keep the battle going until a winner is declared. The winner will be congratualted with a message and their career record will increase.
+When the game is first loaded, the user will need to click on the 'New Game' button to initiate the game. From there let the battling begin. Click on '1..2..3..War' button to see how each player face off in each round. Keep the battle going until a winner is declared. The winner will be congratulated with a message and their career record will increase.
 
 If you don't like the way this game is going, feel free to restart it at any point by clicking the 'New Game' button at any time.
 
@@ -14,7 +14,7 @@ If you don't like the way this game is going, feel free to restart it at any poi
 ## Installation
 1. Clone repo
 2. run `npm install` in the root directory to set up backend dependencies
-3. fdd
+3. run `npm run server` to boot up the server
 4. Open up new terminal and run `cd frontend` to enter the front end directory
 5. run `npm install` to install front end dependencies
 6. run `npm run start` to start the application, this will run on localhost:3000

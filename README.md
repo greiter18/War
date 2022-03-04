@@ -21,7 +21,7 @@ If you don't like the way this game is going, feel free to restart it at any poi
 
 ## Overview
 
-War is the class card game where 2 players square off with each others top card of their deck. Who ever has the higher of the cards collect their opponents card and then both cards go to the bottom of the winners deck. First player to lose all of their cards loses the match and the other player is granted title of winner.
+War is the class card game where 2 players square off with each others top card of their deck. Who ever has the higher of the cards collect their opponent's card and then both cards go to the bottom of the winners deck. First player to lose all of their cards, loses the match and the other player is granted title of winner.
 
 ## Features
 
@@ -54,7 +54,7 @@ MERN stack(MongoDB, Express.js, React, Node.js)
 
 * Implementation of a function that automatically speeds up the playing time of the game. This would allow users to see who won the game at a much quicker time.
 * Add more style to cards, Right now each card is black. Would like to split them between red and black, similiar to an actual card deck.
-* When players draw the same card and have to draw 3 I would want to create a side deck to show that 3 additional cards were drawn out. Right now the player still earns the 3 cards but do not see which.
+* When players draw the same card and have to draw 3, I would want to create a side deck to show that 3 additional cards were drawn out. Right now the player still earns the 3 cards but do not see which.
 
 ## Challenges
 

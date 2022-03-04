@@ -15,7 +15,7 @@ If you don't like the way this game is going, feel free to restart it at any poi
 1. Clone repo
 2. run `npm install` in the root directory to set up backend dependencies
 3. fdd
-4. Open up new terminal and run `cd front end` to enter the front end directory
+4. Open up new terminal and run `cd frontend` to enter the front end directory
 5. run `npm install` to install front end dependencies
 6. run `npm run start` to start the application, this will run on localhost:3000
 

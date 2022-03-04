@@ -53,9 +53,9 @@ MERN stack(MongoDB, Express.js, React, Node.js)
 
 ## Coming Soon
 
-1.Implementation of a function that automatically speeds up the playing time of the game. This would allow users to see who won the game at a much quicker time.
-2.Implement more style to cards, Right now each card is black. Would like to split them between red and black, similiar to an actual card deck.
-3.When players draw the same card I would want to create a side deck to show that 3 additional cards were drawn out.
+* Implementation of a function that automatically speeds up the playing time of the game. This would allow users to see who won the game at a much quicker time.
+* Implement more style to cards, Right now each card is black. Would like to split them between red and black, similiar to an actual card deck.
+* When players draw the same card I would want to create a side deck to show that 3 additional cards were drawn out.
 
 ## Obstacles
 

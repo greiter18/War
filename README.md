@@ -1,5 +1,5 @@
 # War
-Revist your favorite classic card game and see who will dominate conquer the playing field
+Revist your favorite classic card game and see who will conquer the playing field.
 
 ![Screen Shot 2022-03-04 at 11 58 53 AM](https://user-images.githubusercontent.com/66323451/156806632-0205c60a-0019-4ed8-a809-fd52598c8c41.png)
 

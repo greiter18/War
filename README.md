@@ -3,9 +3,17 @@ Revist your favorite classic card game and see who will dominate conquer the pla
 
 ![Screen Shot 2022-03-04 at 11 58 53 AM](https://user-images.githubusercontent.com/66323451/156806632-0205c60a-0019-4ed8-a809-fd52598c8c41.png)
 
+## Installation
+1. Clone repo
+2. run npm install in the root directory to set up backend dependencies
+3. fdd
+4. Open up new terminal and run `cd front end` to enter the front end directory
+5. run `npm install` to install front end dependencies
+6. run `npm run start` to start the application, this will run on localhost:3000
+
 ## Overview
 
-War is the class card game where 2 players square off with each others top card. Who ever has the higher of the cards collect their opponents card and then both cards go to the bottom of the winners deck. First player to lose all of their cards loses the match and the other player is granted title of winner.
+War is the class card game where 2 players square off with each others top card of their deck. Who ever has the higher of the cards collect their opponents card and then both cards go to the bottom of the winners deck. First player to lose all of their cards loses the match and the other player is granted title of winner.
 
 ## Features
 
@@ -18,7 +26,7 @@ Users can advance through each round by clicking the '1..2..3..War' button. Winn
 ![Screen Shot 2022-03-04 at 12 02 04 PM](https://user-images.githubusercontent.com/66323451/156807125-724c8019-31f1-4647-b990-32425e624f16.png)
 
 ### Career score
-Located in the header, players career scores are displayed. Players data is being held in a MongoDB database. The scores are fetched during the start of the game and updated once a winner is declared.
+Located in the header, player's career scores are displayed. Players data is being held in a MongoDB database. The scores are fetched during the start of the game and updated once a winner is declared.
 
 ![Screen Shot 2022-03-04 at 12 01 07 PM](https://user-images.githubusercontent.com/66323451/156806909-019e625e-ddce-4f60-995e-4a0ef02d7080.png)
 

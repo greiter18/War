@@ -18,6 +18,9 @@ Users can advance through each round by clicking the '1..2..3..War' button. Winn
 ### Career score
 Located in the header, players career scores are displayed. Players data is being held in a MongoDB database. The scores are fetched during the start of the game and updated once a winner is declared.
 
+![Screen Shot 2022-03-04 at 12 01 07 PM](https://user-images.githubusercontent.com/66323451/156806909-019e625e-ddce-4f60-995e-4a0ef02d7080.png)
+
+
 ### Remaining Cards
 The remaining cards for both players are on display in the middle of the application. This number will change each round based on who won that round.
 

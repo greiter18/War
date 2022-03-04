@@ -35,7 +35,7 @@ Users can advance through each round by clicking the '1..2..3..War' button. Winn
 ![Screen Shot 2022-03-04 at 12 02 04 PM](https://user-images.githubusercontent.com/66323451/156807125-724c8019-31f1-4647-b990-32425e624f16.png)
 
 ### Career score
-Located in the header, player's career scores are displayed. Players data is being held in a MongoDB database. The scores are fetched during the start of the game and updated once a winner is declared.
+Located in the header, player's career scores are displayed. Player's data is being held in a MongoDB database. The scores are fetched during the start of the game and updated once a winner is declared.
 
 ![Screen Shot 2022-03-04 at 12 01 07 PM](https://user-images.githubusercontent.com/66323451/156806909-019e625e-ddce-4f60-995e-4a0ef02d7080.png)
 

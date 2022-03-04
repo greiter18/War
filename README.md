@@ -13,7 +13,7 @@ If you don't like the way this game is going, feel free to restart it at any poi
 
 ## Installation
 1. Clone repo
-2. run npm install in the root directory to set up backend dependencies
+2. run `npm install` in the root directory to set up backend dependencies
 3. fdd
 4. Open up new terminal and run `cd front end` to enter the front end directory
 5. run `npm install` to install front end dependencies
@@ -42,12 +42,21 @@ Located in the header, player's career scores are displayed. Players data is bei
 ### Remaining Cards
 The remaining cards for both players are on display in the middle of the application. This number will change each round based on who won that round.
 
-
-
 ## Technologies
 
-War was created using React.js, HTML, CSS in the frontend, Express.js and Mongoose for the backend and utilizes a MongoDB database.
+MERN stack(MongoDB, Express.js, React, Node.js)
+
+## Trade Offs
+
+
+
 
 ## Coming Soon
 
-Implementation of a function that automatically speeds up the playing time of the game. This would allow users to see who won the game at a much quicker time.
+1.Implementation of a function that automatically speeds up the playing time of the game. This would allow users to see who won the game at a much quicker time.
+2.Implement more style to cards, Right now each card is black. Would like to split them between red and black, similiar to an actual card deck.
+3.When players draw the same card I would want to create a side deck to show that 3 additional cards were drawn out.
+
+## Obstacles
+
+By using react to create this application I had to keep in mind of how to change the state in order to cause the rerenders. In order to do this, I had to create extra state variables and constantly set them.

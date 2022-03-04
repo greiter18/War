@@ -13,7 +13,7 @@ War is the class card game where 2 players square off with each others top card.
 Users can start a new game by clicking on the 'New Game" button to initiate a new game. The deck is being store in the backend where they are shuffled and then sent to the frontend.
 
 ### Rounds
-Users can advance through each round by clicking the '1..2..3..War' button. Winner of the round will gain their opponents cards.
+Users can advance through each round by clicking the '1..2..3..War' button. Winner of the round will gain their opponents cards. Note- button is disabled until a game has started.
 
 ### Career score
 Located in the header, players career scores are displayed. Players data is being held in a MongoDB database. The scores are fetched during the start of the game and updated once a winner is declared.

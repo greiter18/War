@@ -4,6 +4,7 @@ import axios from 'axios';
 
 let player1_deck = []//shuffledCards.slice(0,26);
 let player2_deck = [] //shuffledCards.slice(26);
+let gameOver = false;
 
 let hand1 = player1_deck[player1_deck.length -1];
 let hand2 = player2_deck[player2_deck.length -1];
@@ -15,7 +16,7 @@ const App = () => {
   // const [deck, setDeck] = useState('');
   const [switcher, setSwitcher] = useState(true)
 
-  let gameOver = false;
+
   
   // When the page mounts- makes a call to fetch both player scores
   useEffect(() => { 
@@ -75,25 +76,34 @@ const App = () => {
     } else (
         war(hand1,hand2)
     )
-    if(!player1) gameOver = true;
-    if(!player2) gameOver = true;
+    if(player1_deck.length === 0) gameOver = true;
+    if(player2_deck.length === 0) gameOver = true;
     setPlayer1(player1_deck[player1_deck.length - 1]);
     setPlayer2(player2_deck[player2_deck.length - 1]);
   }
 
   const winner = () => {
-    if(!player1 && gameOver){
+    if(player1_deck.length === 0 && gameOver){
       axios.put(`/api/players/${scores[1]?._id}`,{body: scores[1].score})
       .then(scores => {setScores(scores.data)});
+      newGame()
       return <h1>Player 2 Wins!</h1>;
     }
-    if(!player2 && gameOver){
+    if(player2_deck.length === 0 && gameOver){
       axios.put(`/api/players/${scores[0]?._id}`,{body: scores[0].score})
       .then(scores => {setScores(scores.data)});
+      newGame()
       return <h1>Player 1 Wins!</h1>;
     }
   }
 
+  const fastFoward = () => {
+      setInterval(draw, 100)
+      if(player1_deck.length === 0 || player2_deck.length === 0) stop()
+  }
+
+  let stop = clearInterval(fastFoward);  
+   
   // const testFunc =() =>{
   //   axios.put(`/api/players/${scores[1]._id}`, {body: scores[1].score})
   //   .then(scores => {
@@ -104,8 +114,6 @@ const App = () => {
   
   return (
     <div className="App">
-      {/* <button onClick={() => testFunc()}>test function</button> */}
-      {console.log('Scores',scores)}
       <header className="header">
         <div className="player-score">Player 1: {scores[0]?.score }</div>
         <h1 className="title">War</h1>
@@ -117,6 +125,7 @@ const App = () => {
         <div>
           <button className="button" onClick={()=> newGame()}>New Game</button>
           <button className="button" disabled={switcher} onClick={() => draw()}>1..2..3.. War</button>
+          {/* <button onClick={() => fastFoward()} disabled={switcher}>Fast Foward</button> */}
         </div>
         <div className="player-hand">
           <p className="player-info">Player2 - Cards Left: {player2_deck.length}</p> 

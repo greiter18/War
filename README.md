@@ -48,7 +48,7 @@ MERN stack(MongoDB, Express.js, React, Node.js)
 
 ## Trade Offs
 
-
+* Decided to implement a button to advance through each round rather than making it automatic. I decided to do this because this allows you the option of keeping better track of the game. One can click on the button faster to speed up the gameplay.
 
 
 ## Coming Soon

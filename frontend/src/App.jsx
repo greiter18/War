@@ -1,9 +1,9 @@
-import './App.css';
+import './stylesheets/App.css';
 import React, {useState , useEffect} from 'react';
 import axios from 'axios';
 
-let player1_deck = []//shuffledCards.slice(0,26);
-let player2_deck = [] //shuffledCards.slice(26);
+let player1_deck = [];
+let player2_deck = [];
 let gameOver = false;
 
 let hand1 = player1_deck[player1_deck.length -1];
@@ -13,17 +13,13 @@ const App = () => {
   const [player1, setPlayer1] = useState(hand1);
   const [player2, setPlayer2] = useState(hand2);
   const [scores, setScores] = useState('');
-  // const [deck, setDeck] = useState('');
   const [switcher, setSwitcher] = useState(true)
 
-
-  
   // When the page mounts- makes a call to fetch both player scores
   useEffect(() => { 
     axios.get(`/api/players/`)
     .then( players => setScores(players.data))
   }, [])
-
 
   const newGame = () => {
     player1_deck = [];
@@ -32,7 +28,6 @@ const App = () => {
     axios.get(`/api/game/`)
       .then((res) => {
         let newDeck = res.data
-        // setDeck(newDeck)
         for(let i = 26; i < newDeck.length; i++) player2_deck.push(newDeck[i])
         for(let i = 0; i < 26; i++) player1_deck.push(newDeck[i]);
         setPlayer1(player1_deck[player1_deck.length - 1]);
@@ -41,10 +36,9 @@ const App = () => {
       .catch(err => console.log('error',err));
 
     setSwitcher(false);
-  }
+  };
   
-  //fast fowrad button-
-  //similiar function with 
+
   const war = (hand1,hand2) => {
     console.log('WAR')
     let top1 = player1_deck.splice(player1_deck.length - 3, 3);
@@ -61,7 +55,7 @@ const App = () => {
     }
     setPlayer1(player1_deck[player1_deck.length - 1]);
     setPlayer2(player2_deck[player2_deck.length - 1]);
-  }
+  };
 
   const draw = () => {
     let hand1 = player1_deck.pop();
@@ -80,7 +74,7 @@ const App = () => {
     if(player2_deck.length === 0) gameOver = true;
     setPlayer1(player1_deck[player1_deck.length - 1]);
     setPlayer2(player2_deck[player2_deck.length - 1]);
-  }
+  };
 
   const winner = () => {
     if(player1_deck.length === 0 && gameOver){
@@ -95,22 +89,8 @@ const App = () => {
       newGame()
       return <h1>Player 1 Wins!</h1>;
     }
-  }
+  };
 
-  const fastFoward = () => {
-      setInterval(draw, 100)
-      if(player1_deck.length === 0 || player2_deck.length === 0) stop()
-  }
-
-  let stop = clearInterval(fastFoward);  
-   
-  // const testFunc =() =>{
-  //   axios.put(`/api/players/${scores[1]._id}`, {body: scores[1].score})
-  //   .then(scores => {
-  //     let newScore = scores.data
-  //     console.log('response scores',scores.data)
-  //     setScores(newScore)});
-  // }
   
   return (
     <div className="App">
@@ -125,7 +105,6 @@ const App = () => {
         <div>
           <button className="button" onClick={()=> newGame()}>New Game</button>
           <button className="button" disabled={switcher} onClick={() => draw()}>1..2..3.. War</button>
-          {/* <button onClick={() => fastFoward()} disabled={switcher}>Fast Foward</button> */}
         </div>
         <div className="player-hand">
           <p className="player-info">Player2 - Cards Left: {player2_deck.length}</p> 

@@ -16,7 +16,6 @@ if (process.env.NODE_ENV === 'production') {
   })
 }
 
-
 mongoose
 .connect(db, {useNewUrlParser: true, useUnifiedTopology: true})
 .then(() => console.log('Connected to MongoDB'))
@@ -25,10 +24,8 @@ mongoose
 app.use(bodyParser.urlencoded({ extended: false })); 
 app.use(bodyParser.json());
 
-
 app.use("/api/players", players);
 app.use("/api/game", game);
-
 
 
 const port = process.env.PORT || 5000;

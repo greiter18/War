@@ -50,12 +50,11 @@ MERN stack(MongoDB, Express.js, React, Node.js)
 
 * Decided to implement a button to advance through each round rather than making it automatic. I decided to do this because this allows you the option of keeping better track of the game. One can click on the button faster to speed up the gameplay.
 
-
 ## Coming Soon
 
 * Implementation of a function that automatically speeds up the playing time of the game. This would allow users to see who won the game at a much quicker time.
-* Implement more style to cards, Right now each card is black. Would like to split them between red and black, similiar to an actual card deck.
-* When players draw the same card I would want to create a side deck to show that 3 additional cards were drawn out.
+* Add more style to cards, Right now each card is black. Would like to split them between red and black, similiar to an actual card deck.
+* When players draw the same card and have to draw 3 I would want to create a side deck to show that 3 additional cards were drawn out. Right now the player still earns the 3 cards but do not see which.
 
 ## Challenges
 

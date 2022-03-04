@@ -59,4 +59,4 @@ MERN stack(MongoDB, Express.js, React, Node.js)
 ## Challenges
 
 * By using react to create this application I had to keep in mind of how to change the state in order to cause the rerenders. In order to do this, I had to create extra state variables and constantly set them.
-* Because the deck is shuffled in the back end and returned to the front. Because this was asynchronous, I had to account for this when distributing the cards to each of the players deck.
+* The deck is shuffled in the back end and returned to the front. Because this was asynchronous, I had to account for this when distributing the cards to each of the players deck.

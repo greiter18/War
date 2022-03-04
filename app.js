@@ -8,6 +8,14 @@ const path = require('path');
 const players = require("./routes/players")
 const game = require("./routes/game")
 
+//for production mode
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('frontend/build'));
+  app.get('/', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
+  })
+}
+
 
 mongoose
 .connect(db, {useNewUrlParser: true, useUnifiedTopology: true})
@@ -17,21 +25,11 @@ mongoose
 app.use(bodyParser.urlencoded({ extended: false })); 
 app.use(bodyParser.json());
 
-app.get("/", (req, res) => {
-  console.log(res);
-  res.send('Hello World')
-})
 
 app.use("/api/players", players);
 app.use("/api/game", game);
 
-//for production mode
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('frontend/build'));
-  app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
-  })
-}
+
 
 const port = process.env.PORT || 5000;
 

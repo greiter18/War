@@ -3,7 +3,7 @@ Revist your favorite classic card game and see who will dominate conquer the pla
 
 ![Screen Shot 2022-03-04 at 11 58 53 AM](https://user-images.githubusercontent.com/66323451/156806632-0205c60a-0019-4ed8-a809-fd52598c8c41.png)
 
-## How to Player
+## How to Play
 Visit the live site hosted on heroku here - <a href="https://war-cardsgame.herokuapp.com/" target="blank">War</a>
 
 When the game is first loaded, the user will need to click on the 'New Game' button to initiate the game. From there let the battling begin. Click on '1..2..3..War' button to see how each player face off in each round. Keep the battle going until a winner is declared. The winner will be congratualted with a message and their career record will increase.
@@ -57,6 +57,7 @@ MERN stack(MongoDB, Express.js, React, Node.js)
 * Implement more style to cards, Right now each card is black. Would like to split them between red and black, similiar to an actual card deck.
 * When players draw the same card I would want to create a side deck to show that 3 additional cards were drawn out.
 
-## Obstacles
+## Challenges
 
-By using react to create this application I had to keep in mind of how to change the state in order to cause the rerenders. In order to do this, I had to create extra state variables and constantly set them.
+* By using react to create this application I had to keep in mind of how to change the state in order to cause the rerenders. In order to do this, I had to create extra state variables and constantly set them.
+* Because the deck is shuffled in the back end and returned to the front. Because this was asynchronous, I had to account for this when distributing the cards to each of the players deck.

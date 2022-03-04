@@ -16,6 +16,9 @@ Users can advance through each round by clicking the '1..2..3..War' button. Winn
 ### Career score
 Located in the header, players career scores are displayed. Players data is being held in a MongoDB database. The scores are fetched during the start of the game and updated once a winner is declared.
 
+### Remaining Cards
+The remaining cards for both players are on display in the middle of the application. This number will change each round based on who won that round.
+
 ## How to Player
 
 When the game is first loaded, the user will need to click on the 'New Game' button to initiate the game. From there let the battling begin. Click on '1..2..3..War' button to see how each player face off in each round. Keep the battle going until a winner is declared. The winner will be congratualted with a message and their career record will increase.
